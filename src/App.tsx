@@ -38,7 +38,7 @@ function App() {
     motebehovResponse.data &&
     motebehovResponse.data.visMotebehov === true &&
     motebehovResponse.data.skjemaType === "SVAR_BEHOV" &&
-    motebehovResponse.data.motebehov === null
+    (motebehovResponse.data.motebehov === null || motebehovResponse.data.motebehovWithFormValues === null)
   ) {
     return <MotebehovPanel />;
   }

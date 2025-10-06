@@ -2,6 +2,6 @@ import { MotebehovDTO } from "../../../schema/motebehovSchema";
 
 export const ingenMotebehov: MotebehovDTO = {
   visMotebehov: false,
-  motebehov: null,
-  skjemaType: null,
+  motebehovWithFormValues: null,
+  skjemaType: "MELD_BEHOV",
 };
