@@ -4,13 +4,13 @@ import { isdialogmoteApiUrl, syfomotebehovApiUrl } from "./api/urls";
 import { Fetcher } from "swr";
 import React from "react";
 import { MotebehovPanel } from "./components/panels/motebehov/MotebehovPanel";
-import { MotebehovDTO } from "./schema/motebehovSchema";
+import { MotebehovStatusDTO } from "./schema/motebehovSchema";
 import { BrevDTO } from "./schema/brevSchema";
 import { DialogmotePanel } from "./components/panels/moteinnkalling/DialogmotePanel";
 
 function App() {
   const fetchBrev: Fetcher<BrevDTO[], string> = (path) => get(path);
-  const fetchMotebehov: Fetcher<MotebehovDTO, string> = (path) => get(path);
+  const fetchMotebehov: Fetcher<MotebehovStatusDTO, string> = (path) => get(path);
   const dialogmoteResponse = useSWRImmutable(isdialogmoteApiUrl, fetchBrev);
   const motebehovResponse = useSWRImmutable(syfomotebehovApiUrl, fetchMotebehov);
 
