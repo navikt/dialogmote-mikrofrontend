@@ -1,3 +1,7 @@
-import { MotebehovDTO } from "../../../schema/motebehovSchema";
+import { MotebehovStatusDTO } from "../../../schema/motebehovSchema";
 
-export const motebehovUtenSvar: MotebehovDTO = { visMotebehov: true, skjemaType: "SVAR_BEHOV", motebehov: null };
+export const motebehovUtenSvar: MotebehovStatusDTO = {
+  visMotebehov: true,
+  skjemaType: "SVAR_BEHOV",
+  motebehov: null,
+};
